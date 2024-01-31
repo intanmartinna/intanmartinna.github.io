@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Sweet&Co</title>
+  <link rel="stylesheet" href="indexStyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <nav class="navbarr">
+    <div class="inner-width">
+      <a class="logo">Fairy Bakery</a>
+      <div class="navbarr-menu">
+        <ul id='MenuItems'>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="category.php">Cake</a>
+              <a href="pastry.php">Pastry</a>
+            </div>
+          </div>
+          <a href="addtocart.php" class="btn btn-outline-success">My Cart</a>
+          <a href="contact.php" class="button" >Contact</a>
+          <a href="homepage.php" class="button" ><i class="fas fa-sign-out-alt"></i></a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.navbarr {
+  /*  position:fixed;*/
+  background-color: #E492C8;
+  /*  #E492C8*/
+  width: 100%;
+  padding: 15px 0;
+  top: 0;
+  z-index: 100;
+  line-height: 20px;
+}
+
+.inner-width {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 100;
+  font-family: 'Great Vibes', sans-serif;
+  color: #222222;
+  cursor: pointer;
+}
+
+.navbarr-menu a {
+  background-color: #CB5985;
+  color: black;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  /*  font-size: 13px;*/
+  /*  font-weight: 500;
+  font-family: 'Raleway', sans-serif;*/
+  /*  background-color: #EB7AA6;*/
+  /*  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 35px;
+  display: inline-block;*/
+}
+
+/*.navbarr-menu a::after{
+  content: '';
+  display: block;
+  width: 2;
+  height: 5px;
+  background-color: #EB7AA6;
+  t*//*ransition:width .3s;
+}*/
+
+/*.dropbtn {
+  background-color: #CB5985;
+  color: black;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}*/
+
+.navbarr-menu a:hover::after {
+  width: 100%;
+}
+
+.title p {
+  margin-bottom: 0;
+  margin-top: 33px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.content2 button {
+  padding: 14px 27px;
+  margin-top: 30px;
+  background-color: #de6900;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.dropbtn {
+  background-color: #CB5985;
+  color: black;
+  padding: 8px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #EB7AA6;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EB7AA6;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #EB7AA6;
+}
+
+.show {
+  display: block;
+}
+
+</style>

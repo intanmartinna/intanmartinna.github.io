@@ -1,0 +1,102 @@
+<?php
+  echo "<script>window.location='login_form.php'</script>";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bakery Sweet&Co</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="full-page">
+    <div class="navbar">
+      <div>
+        <a href='website.html'>Bakery</a>
+      </div>
+      <nav>
+
+        <ul id='MenuItems'>
+          <li><a href='#'>Home </a></li>
+          <li><a href='#'>Menu </a></li>
+          <li><a href='#'>Contact </a></li>
+          <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display = 'block'"
+              style="width:auto;">Login</button> </li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <div id='login-form' class='login-page'>
+      </form>
+
+      <div class=" form-box">
+        <div class='button-box'>
+          <div id='btn'></div>
+          <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+          <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+        </div>
+
+        <!--login form-->
+        <form id='login' class='input-group-login'>
+          <center>
+            <form action="/action_page.php">
+              <input type="radio" id="Login" name="Login" value="Users" />Users&#160; &#160;
+              &#160;
+              <input type="radio" id="Login" name="Login" value="Admin" />
+              <label for="Admin">Admin</label>
+          </center>
+          <input type='text' class='input-field' placeholder='Email Id' style="color:black" ; required>
+          <input type='password' class='input-field' placeholder='Enter password' style="color:black" ; required>
+          <input type='checkbox' class='check-box'><span>Remember password</span>
+          <button type='submit' class='submit-btn'> Log in</button>
+        </form>
+        </form>
+
+
+        <!--registeration form -->
+        <form id='register' class='input-group-register'>
+          <input type='text' class='input-field' placeholder='First Name' style="color:black" ; required>
+          <input type='text' class='input-field' placeholder='Last Name' style="color:black" ; required>
+          <input type='text' class='input-field' placeholder='Email Id' style="color:back" ; required>
+          <input type='password' class='input-field' placeholder='Confirm password' style="color:black" ; required>
+          <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+          <button type='submit' class='submit-btn'>Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--for login and registration form to move correctly-->
+  <script src="app.js"></script>
+  <script>
+    var x = document.getElementById('login');
+    var y = document.getElementById('register');
+    var z = document.getElementById('btn');
+
+    function register() {
+      x.style.left = '-400px';
+      y.style.left = '50px';
+      z.style.left = '110px';
+    }
+    function login() {
+      x.style.left = '50px';
+      y.style.left = '450px';
+      z.style.left = '0px';
+    }
+  </script>
+  <script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
